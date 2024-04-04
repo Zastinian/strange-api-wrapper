@@ -14,7 +14,7 @@ pub fn blur(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResul
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -31,7 +31,7 @@ pub fn brighten(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -45,7 +45,7 @@ pub fn burn(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResul
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -59,7 +59,7 @@ pub fn darken(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsRes
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -75,7 +75,7 @@ pub fn deepfry(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -92,7 +92,7 @@ pub fn distort(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -108,7 +108,7 @@ pub fn greyscale(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -121,7 +121,7 @@ pub fn invert(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsRes
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -138,7 +138,7 @@ pub fn pixelate(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -151,7 +151,7 @@ pub fn sepia(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResu
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -168,7 +168,7 @@ pub fn sharpen(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
 
@@ -185,6 +185,6 @@ pub fn threshold(
             js_buffer.as_mut_slice(&mut cx).copy_from_slice(&buffer);
             Ok(js_buffer)
         }
-        Err(err) => cx.throw_error(format!("Failed to blur image: {}", err)),
+        Err(err) => cx.throw_error(format!("Failed: {}", err)),
     }
 }
