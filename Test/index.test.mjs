@@ -6,7 +6,10 @@ process.loadEnvFile("./.env");
 
 const api = Strange(process.env.API_KEY);
 
-const buf = api.circle(process.env.IMAGE_URL);
+const buf = api.blur({
+  image: process.env.IMAGE_URL,
+  level: 10,
+});
 
 fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), function (err) {
   if (err) {
