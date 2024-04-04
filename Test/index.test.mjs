@@ -2,14 +2,16 @@ import Strange from "../Package/index.js";
 import fs from "fs";
 import {Buffer} from "buffer";
 
-const api = Strange("token");
+process.loadEnvFile("./.env");
 
-const blur = api.pixelate("image", 32);
+const api = Strange(process.env.API_KEY);
 
-fs.writeFile("img.png", Buffer.from(blur), function (err) {
+const buf = api.circle(process.env.IMAGE_URL);
+
+fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), function (err) {
   if (err) {
     console.error("Error al escribir el archivo:", err);
   } else {
-    console.log("Imagen guardada correctamente en", "rutaImagen");
+    console.log("Imagen guardada!");
   }
 });
