@@ -1,8 +1,9 @@
 {
   "name": "strange-api-wrapper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
@@ -15,5 +16,16 @@
   "license": "ISC",
   "devDependencies": {
     "cargo-cp-artifact": "^0.1"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zastinian/strange-api-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zastinian/strange-api-wrapper/issues"
+  },
+  "homepage": "https://docs.hedystia.com/strange.api/start"
 }
