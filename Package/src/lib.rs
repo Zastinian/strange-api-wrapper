@@ -4,6 +4,7 @@ use urlencoding::encode;
 
 mod buffers;
 mod filters;
+mod generators;
 mod overlays;
 mod utils;
 
@@ -126,6 +127,509 @@ impl StrangeApi {
         Ok(buffers::filter_buffer(
             self.api_key.clone(),
             "threshold",
+            params,
+        ))
+    }
+
+    // GENERATORS
+
+    pub fn pokemon_3000_years(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "3000-years",
+            params,
+        ))
+    }
+
+    pub fn ad(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "ad",
+            params,
+        ))
+    }
+
+    pub fn affect(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "affect",
+            params,
+        ))
+    }
+
+    pub fn batslap(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "batslap",
+            params,
+        ))
+    }
+
+    pub fn beautiful(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "beautiful",
+            params,
+        ))
+    }
+
+    pub fn bed(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "bed",
+            params,
+        ))
+    }
+
+    pub fn bobross(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "bobross",
+            params,
+        ))
+    }
+
+    pub fn challenger(&self, image: String, silhouetted: bool) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}&silhouetted={}", encoded_image, silhouetted);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "bobross",
+            params,
+        ))
+    }
+
+    pub fn changemymind(&self, text: String) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!("text={}", text);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "changemymind",
+            params,
+        ))
+    }
+
+    pub fn clown(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "clown",
+            params,
+        ))
+    }
+
+    pub fn clyde(&self, text: String) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!("text={}", text);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "clyde",
+            params,
+        ))
+    }
+
+    pub fn confusedstonk(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "confusedstonk",
+            params,
+        ))
+    }
+
+    pub fn delete(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "delete",
+            params,
+        ))
+    }
+
+    pub fn demotivational(
+        &self,
+        title: String,
+        text: String,
+        image: String,
+    ) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("title={}&text={}&image={}", title, text, encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "demotivational",
+            params,
+        ))
+    }
+
+    pub fn dexter(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "dexter",
+            params,
+        ))
+    }
+
+    pub fn discordblack(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "discordblack",
+            params,
+        ))
+    }
+
+    pub fn discordblue(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "discordblue",
+            params,
+        ))
+    }
+
+    pub fn doublestonk(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "doublestonk",
+            params,
+        ))
+    }
+
+    pub fn facepalm(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "facepalm",
+            params,
+        ))
+    }
+
+    pub fn fusion(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "fusion",
+            params,
+        ))
+    }
+
+    pub fn gru_plan(
+        &self,
+        first_setp: String,
+        second_step: String,
+        third_step: String,
+        fourth_step: String,
+    ) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!(
+            "firstSetp={}&secondStep={}&thirdStep={}&fourthStep={}",
+            first_setp, second_step, third_step, fourth_step
+        );
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "gru-plan",
+            params,
+        ))
+    }
+
+    pub fn heartbreaking(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "heartbreaking",
+            params,
+        ))
+    }
+
+    pub fn hitler(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "hitler",
+            params,
+        ))
+    }
+
+    pub fn jail(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "jail",
+            params,
+        ))
+    }
+
+    pub fn jokeoverhead(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "jokeoverhead",
+            params,
+        ))
+    }
+
+    pub fn karaba(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "karaba",
+            params,
+        ))
+    }
+
+    pub fn kiss(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "kiss",
+            params,
+        ))
+    }
+
+    pub fn kyon_gun(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "kyon-gun",
+            params,
+        ))
+    }
+
+    pub fn lisa_presentation(&self, text: String) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!("text={}", text);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "lisa-presentation",
+            params,
+        ))
+    }
+
+    pub fn mikkelsen(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "mikkelsen",
+            params,
+        ))
+    }
+
+    pub fn mirror(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "mirror",
+            params,
+        ))
+    }
+
+    pub fn mms(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "mms",
+            params,
+        ))
+    }
+
+    pub fn notstonk(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "notstonk",
+            params,
+        ))
+    }
+
+    pub fn ohno(&self, text: String) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!("text={}", text);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "ohno",
+            params,
+        ))
+    }
+
+    pub fn plankton_plan(
+        &self,
+        first_setp: String,
+        second_step: String,
+        third_step: String,
+        fourth_step: String,
+    ) -> Result<Vec<u8>, std::io::Error> {
+        let params = format!(
+            "firstSetp={}&secondStep={}&thirdStep={}&fourthStep={}",
+            first_setp, second_step, third_step, fourth_step
+        );
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "plankton-plan",
+            params,
+        ))
+    }
+
+    pub fn poutine(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "poutine",
+            params,
+        ))
+    }
+
+    pub fn rip(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "rip",
+            params,
+        ))
+    }
+
+    pub fn shit(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "shit",
+            params,
+        ))
+    }
+
+    pub fn snyder(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "snyder",
+            params,
+        ))
+    }
+
+    pub fn spank(&self, image1: String, image2: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image1 = encode(&image1);
+        let encoded_image2 = encode(&image2);
+        let params = format!("image1={}&image2={}", encoded_image1, encoded_image2);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "spank",
+            params,
+        ))
+    }
+
+    pub fn stonk(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "stonk",
+            params,
+        ))
+    }
+
+    pub fn tattoo(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "tattoo",
+            params,
+        ))
+    }
+
+    pub fn thomas(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "thomas",
+            params,
+        ))
+    }
+
+    pub fn trash(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "trash",
+            params,
+        ))
+    }
+
+    pub fn wanted(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "wanted",
+            params,
+        ))
+    }
+
+    pub fn worthless(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "worthless",
+            params,
+        ))
+    }
+
+    pub fn youtube(
+        &self,
+        image: String,
+        username: String,
+        text: String,
+    ) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!(
+            "image={}&username={}&text={}",
+            encoded_image, username, text
+        );
+        Ok(buffers::generators_buffer(
+            self.api_key.clone(),
+            "youtube",
             params,
         ))
     }
@@ -390,6 +894,245 @@ fn init(mut cx: FunctionContext) -> JsResult<JsObject> {
     let threshold_filter =
         JsFunction::new(&mut cx, move |cx| filters::threshold(cx, Arc::clone(&st)));
     exports.set(&mut cx, "threshold", threshold_filter?)?;
+
+    // GENERATORS
+
+    let st = Arc::clone(&strange_api);
+    let pokemon_3000_years_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::pokemon_3000_years(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "pokemon3000Years", pokemon_3000_years_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let ad_overlay = JsFunction::new(&mut cx, move |cx| generators::ad(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "ad", ad_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let affect_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::affect(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "affect", affect_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let batslap_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::batslap(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "batslap", batslap_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let beautiful_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::beautiful(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "beautiful", beautiful_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let bed_overlay = JsFunction::new(&mut cx, move |cx| generators::bed(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "bed", bed_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let bobross_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::bobross(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "bobross", bobross_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let challenger_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::challenger(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "challenger", challenger_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let changemymind_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::changemymind(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "changemymind", changemymind_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let clown_overlay = JsFunction::new(&mut cx, move |cx| generators::clown(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "clown", clown_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let clyde_overlay = JsFunction::new(&mut cx, move |cx| generators::clyde(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "clyde", clyde_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let confusedstonk_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::confusedstonk(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "confusedstonk", confusedstonk_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let delete_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::delete(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "delete", delete_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let demotivational_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::demotivational(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "demotivational", demotivational_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let dexter_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::dexter(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "dexter", dexter_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let discordblack_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::discordblack(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "discordblack", discordblack_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let discordblue_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::discordblue(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "discordblue", discordblue_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let doublestonk_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::doublestonk(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "doublestonk", doublestonk_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let facepalm_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::facepalm(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "facepalm", facepalm_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let fusion_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::fusion(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "fusion", fusion_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let gru_plan_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::gru_plan(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "gruPlan", gru_plan_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let heartbreaking_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::heartbreaking(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "heartbreaking", heartbreaking_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let hitler_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::hitler(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "hitler", hitler_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let jail_overlay = JsFunction::new(&mut cx, move |cx| generators::jail(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "jail", jail_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let jokeoverhead_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::jokeoverhead(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "jokeoverhead", jokeoverhead_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let karaba_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::karaba(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "karaba", karaba_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let kiss_overlay = JsFunction::new(&mut cx, move |cx| generators::kiss(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "kiss", kiss_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let kyon_gun_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::kyon_gun(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "kyonGun", kyon_gun_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let lisa_presentation_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::lisa_presentation(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "lisaPresentation", lisa_presentation_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let mikkelsen_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::mikkelsen(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "mikkelsen", mikkelsen_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let mirror_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::mirror(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "mirror", mirror_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let mms_overlay = JsFunction::new(&mut cx, move |cx| generators::mms(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "mms", mms_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let notstonk_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::notstonk(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "notstonk", notstonk_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let ohno_overlay = JsFunction::new(&mut cx, move |cx| generators::ohno(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "ohno", ohno_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let plankton_plan_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::plankton_plan(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "planktonPlan", plankton_plan_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let poutine_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::poutine(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "poutine", poutine_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let rip_overlay = JsFunction::new(&mut cx, move |cx| generators::rip(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "rip", rip_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let shit_overlay = JsFunction::new(&mut cx, move |cx| generators::shit(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "shit", shit_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let snyder_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::snyder(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "snyder", snyder_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let spank_overlay = JsFunction::new(&mut cx, move |cx| generators::spank(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "spank", spank_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let stonk_overlay = JsFunction::new(&mut cx, move |cx| generators::stonk(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "stonk", stonk_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let tattoo_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::tattoo(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "tattoo", tattoo_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let thomas_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::thomas(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "thomas", thomas_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let trash_overlay = JsFunction::new(&mut cx, move |cx| generators::trash(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "trash", trash_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let wanted_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::wanted(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "wanted", wanted_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let worthless_overlay = JsFunction::new(&mut cx, move |cx| {
+        generators::worthless(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "worthless", worthless_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let youtube_overlay =
+        JsFunction::new(&mut cx, move |cx| generators::youtube(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "youtube", youtube_overlay?)?;
 
     // OVERLAYS
 
