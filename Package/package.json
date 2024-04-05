@@ -8,7 +8,8 @@
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
     "install": "npm run build-release",
-    "test": "cargo test"
+    "test": "cargo test",
+    "test:node": "npm run build-release && cd ../Test && node index.test.mjs"
   },
   "author": "contact@hedystia.com",
   "license": "ISC",
