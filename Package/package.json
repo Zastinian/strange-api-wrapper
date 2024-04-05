@@ -1,7 +1,7 @@
 {
   "name": "strange-api-wrapper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Strange API Wrapper",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/Zastinian/strange-api-wrapper/issues"
   },
-  "homepage": "https://docs.hedystia.com/strange.api/start"
+  "homepage": "https://docs.hedystia.com/strange/start"
 }
