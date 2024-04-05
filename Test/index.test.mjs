@@ -6,9 +6,9 @@ process.loadEnvFile("./.env");
 
 const api = Strange(process.env.API_KEY);
 
-const buf = api.blur({
+const buf = api.challenger({
   image: process.env.IMAGE_URL,
-  level: 10,
+  silhouetted: true,
 });
 
 fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), function (err) {
