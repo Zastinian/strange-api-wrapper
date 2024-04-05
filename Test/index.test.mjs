@@ -4,7 +4,7 @@ import {Buffer} from "buffer";
 
 process.loadEnvFile("./.env");
 
-const api = Strange(process.env.API_KEY);
+const api = new Strange(process.env.API_KEY);
 
 const buf = api.challenger({
   image: process.env.IMAGE_URL,
