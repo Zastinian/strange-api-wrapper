@@ -4,6 +4,7 @@ use urlencoding::encode;
 
 mod buffers;
 mod filters;
+mod overlays;
 mod utils;
 
 struct StrangeApi {
@@ -125,6 +126,88 @@ impl StrangeApi {
         Ok(buffers::filter_buffer(
             self.api_key.clone(),
             "threshold",
+            params,
+        ))
+    }
+
+    // OVERLAYS
+
+    pub fn approved(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "approved",
+            params,
+        ))
+    }
+
+    pub fn brazzers(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "brazzers",
+            params,
+        ))
+    }
+
+    pub fn gay(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "gay",
+            params,
+        ))
+    }
+
+    pub fn halloween(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "halloween",
+            params,
+        ))
+    }
+
+    pub fn rejected(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "rejected",
+            params,
+        ))
+    }
+
+    pub fn thuglife(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "thuglife",
+            params,
+        ))
+    }
+
+    pub fn to_be_continued(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "to-be-continued",
+            params,
+        ))
+    }
+
+    pub fn wasted(&self, image: String) -> Result<Vec<u8>, std::io::Error> {
+        let encoded_image = encode(&image);
+        let params = format!("image={}", encoded_image);
+        Ok(buffers::overlays_buffer(
+            self.api_key.clone(),
+            "wasted",
             params,
         ))
     }
@@ -308,7 +391,48 @@ fn init(mut cx: FunctionContext) -> JsResult<JsObject> {
         JsFunction::new(&mut cx, move |cx| filters::threshold(cx, Arc::clone(&st)));
     exports.set(&mut cx, "threshold", threshold_filter?)?;
 
-    // Utils
+    // OVERLAYS
+
+    let st = Arc::clone(&strange_api);
+    let approved_overlay =
+        JsFunction::new(&mut cx, move |cx| overlays::approved(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "approved", approved_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let brazzers_overlay =
+        JsFunction::new(&mut cx, move |cx| overlays::brazzers(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "brazzers", brazzers_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let gay_overlay = JsFunction::new(&mut cx, move |cx| overlays::gay(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "gay", gay_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let halloween_overlay =
+        JsFunction::new(&mut cx, move |cx| overlays::halloween(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "halloween", halloween_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let rejected_overlay =
+        JsFunction::new(&mut cx, move |cx| overlays::rejected(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "rejected", rejected_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let thuglife_overlay =
+        JsFunction::new(&mut cx, move |cx| overlays::thuglife(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "thuglife", thuglife_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let to_be_continued_overlay = JsFunction::new(&mut cx, move |cx| {
+        overlays::to_be_continued(cx, Arc::clone(&st))
+    });
+    exports.set(&mut cx, "toBeContinued", to_be_continued_overlay?)?;
+
+    let st = Arc::clone(&strange_api);
+    let wasted_overlay = JsFunction::new(&mut cx, move |cx| overlays::wasted(cx, Arc::clone(&st)));
+    exports.set(&mut cx, "wasted", wasted_overlay?)?;
+
+    // UTILS
 
     let st = Arc::clone(&strange_api);
     let circle_utils = JsFunction::new(&mut cx, move |cx| utils::circle(cx, Arc::clone(&st)));
