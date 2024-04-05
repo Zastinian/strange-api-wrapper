@@ -5,8 +5,20 @@ use std::sync::{Arc, Mutex};
 use crate::StrangeApi;
 
 pub fn blur(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let level = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let level_data: Handle<JsValue> = data.get(&mut cx, "level")?;
+    let level_string = level_data.to_string(&mut cx)?.value(&mut cx);
+    if level_string == "undefined" {
+        return cx.throw_error("'level' field is missing");
+    }
+    let level: f64 = level_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.blur(image, level) {
         Ok(buffer) => {
@@ -22,8 +34,20 @@ pub fn brighten(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let amount = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let amount_data: Handle<JsValue> = data.get(&mut cx, "amount")?;
+    let amount_string = amount_data.to_string(&mut cx)?.value(&mut cx);
+    if amount_string == "undefined" {
+        return cx.throw_error("'amount' field is missing");
+    }
+    let amount: f64 = amount_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.brighten(image, amount) {
         Ok(buffer) => {
@@ -36,8 +60,20 @@ pub fn brighten(
 }
 
 pub fn burn(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let level = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let level_data: Handle<JsValue> = data.get(&mut cx, "level")?;
+    let level_string = level_data.to_string(&mut cx)?.value(&mut cx);
+    if level_string == "undefined" {
+        return cx.throw_error("'level' field is missing");
+    }
+    let level: f64 = level_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.burn(image, level) {
         Ok(buffer) => {
@@ -50,8 +86,20 @@ pub fn burn(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResul
 }
 
 pub fn darken(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let amount = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let amount_data: Handle<JsValue> = data.get(&mut cx, "amount")?;
+    let amount_string = amount_data.to_string(&mut cx)?.value(&mut cx);
+    if amount_string == "undefined" {
+        return cx.throw_error("'amount' field is missing");
+    }
+    let amount: f64 = amount_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.darken(image, amount) {
         Ok(buffer) => {
@@ -67,7 +115,12 @@ pub fn deepfry(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
     let st = strange.lock().unwrap();
     match st.deepfry(image) {
         Ok(buffer) => {
@@ -83,8 +136,20 @@ pub fn distort(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let level = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let level_data: Handle<JsValue> = data.get(&mut cx, "level")?;
+    let level_string = level_data.to_string(&mut cx)?.value(&mut cx);
+    if level_string == "undefined" {
+        return cx.throw_error("'level' field is missing");
+    }
+    let level: f64 = level_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.distort(image, level) {
         Ok(buffer) => {
@@ -100,7 +165,12 @@ pub fn greyscale(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
     let st = strange.lock().unwrap();
     match st.greyscale(image) {
         Ok(buffer) => {
@@ -113,7 +183,12 @@ pub fn greyscale(
 }
 
 pub fn invert(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
     let st = strange.lock().unwrap();
     match st.invert(image) {
         Ok(buffer) => {
@@ -129,8 +204,23 @@ pub fn pixelate(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let pixels = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let pixels_data: Handle<JsValue> = match data.get(&mut cx, "pixels") {
+        Ok(value) => value,
+        Err(_) => return cx.throw_error("'pixels' field is missing"),
+    };
+    let pixels_string = pixels_data.to_string(&mut cx)?.value(&mut cx);
+    if pixels_string == "undefined" {
+        return cx.throw_error("'pixels' field is missing");
+    }
+    let pixels: f64 = pixels_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.pixelate(image, pixels) {
         Ok(buffer) => {
@@ -143,7 +233,12 @@ pub fn pixelate(
 }
 
 pub fn sepia(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
     let st = strange.lock().unwrap();
     match st.sepia(image) {
         Ok(buffer) => {
@@ -159,8 +254,20 @@ pub fn sharpen(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let level = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let level_data: Handle<JsValue> = data.get(&mut cx, "level")?;
+    let level_string = level_data.to_string(&mut cx)?.value(&mut cx);
+    if level_string == "undefined" {
+        return cx.throw_error("'level' field is missing");
+    }
+    let level: f64 = level_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.sharpen(image, level) {
         Ok(buffer) => {
@@ -176,8 +283,20 @@ pub fn threshold(
     mut cx: FunctionContext,
     strange: Arc<Mutex<StrangeApi>>,
 ) -> JsResult<JsArrayBuffer> {
-    let image = cx.argument::<JsString>(0)?.value(&mut cx);
-    let amount = cx.argument::<JsNumber>(1)?.value(&mut cx);
+    let data = cx.argument::<JsObject>(0)?;
+    let image_data: Handle<JsValue> = data.get(&mut cx, "image")?;
+    let image = image_data.to_string(&mut cx)?.value(&mut cx);
+    if image == "undefined" {
+        return cx.throw_error("'image' field is missing");
+    }
+    let amount_data: Handle<JsValue> = data.get(&mut cx, "amount")?;
+    let amount_string = amount_data.to_string(&mut cx)?.value(&mut cx);
+    if amount_string == "undefined" {
+        return cx.throw_error("'amount' field is missing");
+    }
+    let amount: f64 = amount_data
+        .downcast_or_throw::<JsNumber, _>(&mut cx)?
+        .value(&mut cx);
     let st = strange.lock().unwrap();
     match st.threshold(image, amount) {
         Ok(buffer) => {
