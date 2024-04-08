@@ -1,11 +1,11 @@
 ## Installation
 
 ```
-npm i @hedystia/strange
+npm i strange.api
 
-pnpm i @hedystia/strange
+pnpm i strange.api
 
-yarn add @hedystia/strange
+yarn add strange.api
 ```
 
 ## Nodejs Version
@@ -25,12 +25,12 @@ yarn add @hedystia/strange
 ## Example
 
 ```js
-const Strange = require("@hedystia/strange");
+const Strange = require("strange.api");
 const {Buffer} = require("buffer");
 
 // or
 
-import Strange from "@hedystia/strange";
+import Strange from "strange.api";
 import {Buffer} from "buffer";
 
 process.loadEnvFile("./.env");
