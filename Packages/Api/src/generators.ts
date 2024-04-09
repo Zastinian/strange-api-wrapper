@@ -1,4 +1,4 @@
-import type core from "../../Core"
+import type core from "@hedystia/strange.core"
 
 /**
  * @class

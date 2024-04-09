@@ -1,4 +1,4 @@
-import Core from "../../Core"
+import Core from "@hedystia/strange.core"
 import Filters from "./filters"
 import Generators from "./generators"
 import Overlays from "./overlays"
