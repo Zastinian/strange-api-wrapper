@@ -13,7 +13,6 @@ const buf = api.generators.challenger({
 
 fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), (err) => {
 	if (!err) {
-		// eslint-disable-next-line no-console
 		console.log("Imagen guardada!")
 	} else {
 		console.error("Error al escribir el archivo:", err)
