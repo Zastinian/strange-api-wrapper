@@ -34,7 +34,7 @@
     "strangebot"
   ],
   "dependencies": {
-    "@hedystia/strange.core": "1.0.1"
+    "@hedystia/strange.core": "1.0.3"
   },
   "publishConfig": {
     "access": "public"
