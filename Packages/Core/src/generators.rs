@@ -2,7 +2,7 @@ use neon::prelude::*;
 use neon::types::buffer::TypedArray;
 use std::sync::{Arc, Mutex};
 
-use crate::StrangeApi;
+use crate::client::StrangeApi;
 
 pub fn pokemon_3000_years(
     mut cx: FunctionContext,

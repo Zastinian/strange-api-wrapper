@@ -2,7 +2,7 @@ use neon::prelude::*;
 use neon::types::buffer::TypedArray;
 use std::sync::{Arc, Mutex};
 
-use crate::StrangeApi;
+use crate::client::StrangeApi;
 
 pub fn blur(mut cx: FunctionContext, strange: Arc<Mutex<StrangeApi>>) -> JsResult<JsArrayBuffer> {
     let data = cx.argument::<JsObject>(0)?;

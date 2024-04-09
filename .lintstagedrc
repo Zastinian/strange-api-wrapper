@@ -1,0 +1,3 @@
+{
+	"src/**/*.{rs,ts,js}": ["eslint --ext", "prettier --check"]
+}

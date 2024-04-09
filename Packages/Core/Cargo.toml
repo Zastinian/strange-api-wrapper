@@ -1,6 +1,6 @@
 [package]
 name = "strange-api-wrapper"
-version = "1.0.1"
+version = "1.0.0"
 authors = ["contact@hedystia.com"]
 license = "ISC"
 edition = "2021"

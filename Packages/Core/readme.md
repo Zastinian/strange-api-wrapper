@@ -8,8 +8,6 @@ pnpm i strange.api
 yarn add strange.api
 ```
 
-## [Contributing](/.github/CONTRIBUTING.md)
-
 ## Nodejs Version
 
 - `v18.0.0` or higher
