@@ -1,0 +1,42 @@
+{
+  "name": "strange.api",
+  "version": "1.1.0",
+  "description": "Strange API Wrapper",
+  "main": "index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "contact@hedystia.com",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zastinian/strange-api-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zastinian/strange-api-wrapper/issues"
+  },
+  "homepage": "https://docs.hedystia.com/strange/start",
+  "keywords": [
+    "api",
+    "wrapper",
+    "image",
+    "strange",
+    "filters",
+    "generators",
+    "strange-api",
+    "strange-api-wrapper",
+    "strangebot"
+  ],
+  "dependencies": {
+    "@hedystia/strange.core": "../Core"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
