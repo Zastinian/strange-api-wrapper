@@ -8,6 +8,8 @@ pnpm i strange.api
 yarn add strange.api
 ```
 
+## [Contributing](/.github/CONTRIBUTING.md)
+
 ## Nodejs Version
 
 - `v18.0.0` or higher
@@ -25,22 +27,22 @@ yarn add strange.api
 ## Example
 
 ```js
-const Strange = require("strange.api");
-const {Buffer} = require("buffer");
+const Strange = require("strange.api")
+const { Buffer } = require("buffer")
 
 // or
 
-import Strange from "strange.api";
-import {Buffer} from "buffer";
+import Strange from "strange.api"
+import { Buffer } from "buffer"
 
-process.loadEnvFile("./.env");
+process.loadEnvFile("./.env")
 
-const api = new Strange(process.env.API_KEY);
+const api = new Strange(process.env.API_KEY)
 
 const buf = api.challenger({
   image: process.env.IMAGE_URL,
   silhouetted: true,
-});
+})
 
-console.log(Buffer.from(buf));
+console.log(Buffer.from(buf))
 ```
