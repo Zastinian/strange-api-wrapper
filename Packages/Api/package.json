@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "Strange API Wrapper",
   "main": "index.cjs",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "contact@hedystia.com",
   "license": "ISC",
+  "type": "commonjs",
   "engines": {
     "node": ">=18.0.0"
   },
