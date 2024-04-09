@@ -28,6 +28,7 @@ module.exports = {
 		"no-constant-binary-expression": "warn",
 		"no-console": "off",
 		"no-debugger": "warn",
+		"no-import-assign": "off",
 		"no-extend-native": "off",
 		"no-trailing-spaces": "warn",
 		"space-before-function-paren": "off",
