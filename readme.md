@@ -27,19 +27,19 @@ yarn add strange.api
 ## Example
 
 ```js
-const Strange = require("strange.api")
-const { Buffer } = require("buffer")
+import { Buffer } from "node:buffer"
+import Strange from "strange.api"
 
 // or
 
-import Strange from "strange.api"
-import { Buffer } from "buffer"
+const { Buffer } = require("node:buffer")
+const Strange = require("strange.api")
 
 process.loadEnvFile("./.env")
 
 const api = new Strange(process.env.API_KEY)
 
-const buf = api.challenger({
+const buf = api.generators.challenger({
   image: process.env.IMAGE_URL,
   silhouetted: true,
 })
