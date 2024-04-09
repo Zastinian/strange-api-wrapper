@@ -1,6 +1,6 @@
 {
   "name": "strange.api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Strange API Wrapper",
   "main": "index.cjs",
   "types": "dist/index.d.ts",
