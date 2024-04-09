@@ -1,20 +1,26 @@
-import StrangeApi from "../Package";
-import fs from "fs";
-import {Buffer} from "buffer";
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { Buffer } from "node:buffer"
+import fs from "node:fs"
+import StrangeApi from "../Packages/Api"
 
-process.loadEnvFile("./.env");
+process.loadEnvFile("./.env")
 
-const api = new StrangeApi(process.env.API_KEY ?? "");
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const api = new StrangeApi(process.env.API_KEY ?? "")
 
-const buf = api.blur({
-  image: process.env.IMAGE_URL ?? "",
-  level: 1,
-});
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const buf = api.generators.challenger({
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+	image: process.env.IMAGE_URL ?? "",
+	silhouetted: true,
+})
 
-fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), function (err) {
-  if (err) {
-    console.error("Error al escribir el archivo:", err);
-  } else {
-    console.log("Imagen guardada!");
-  }
-});
+fs.writeFile(`${Date.now()}.png`, Buffer.from(buf), (err) => {
+	if (!err) {
+		// eslint-disable-next-line no-console
+		console.log("Imagen guardada!")
+	} else {
+		console.error("Error al escribir el archivo:", err)
+	}
+})
