@@ -1,0 +1,25 @@
+{
+  "name": "strange-api-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "eslint --ext .ts,.js . --fix",
+    "format": "prettier --write Packages/Api/src && prettier --write Packages/Core/src && prettier --write Docs",
+    "format:check": "prettier --check Packages/Api/src && prettier --check Packages/Core/src && prettier --check Docs",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "0.43.1",
+    "@typescript-eslint/parser": "7.5.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5"
+  }
+}
