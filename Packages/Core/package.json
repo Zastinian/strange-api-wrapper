@@ -1,6 +1,6 @@
 {
   "name": "strange-api-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Strange API Wrapper",
   "main": "index.js",
   "types": "index.d.ts",
