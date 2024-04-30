@@ -1,5 +1,13 @@
 pnpm-lock.yaml
 package-lock.json
+bun.lockb
 yarn.lock
 node_modules/
 dist/
+.vscode/extensions.json
+Test/node_modules/
+Packages/Api/dist/
+Packages/Api/node_modules/
+Packages/Core/node_modules/
+Packages/Core/target/
+Packages/Core/index.node

@@ -1,12 +1,12 @@
-import type core from "@hedystia/strange.core"
+import type core from "@hedystia/strange.core";
 
 /**
  * @class
  */
 export default class Filters {
-	core: core
+	core: core;
 	constructor(core: core) {
-		this.core = core
+		this.core = core;
 	}
 
 	/**
@@ -19,7 +19,7 @@ export default class Filters {
 		return this.core.blur({
 			image,
 			level,
-		})
+		});
 	}
 
 	/**
@@ -32,7 +32,7 @@ export default class Filters {
 		return this.core.brighten({
 			image,
 			amount,
-		})
+		});
 	}
 
 	/**
@@ -45,7 +45,7 @@ export default class Filters {
 		return this.core.burn({
 			image,
 			level,
-		})
+		});
 	}
 
 	/**
@@ -58,7 +58,7 @@ export default class Filters {
 		return this.core.darken({
 			image,
 			amount,
-		})
+		});
 	}
 
 	/**
@@ -69,7 +69,7 @@ export default class Filters {
 	deepfry({ image }: { image: string }): ArrayBuffer {
 		return this.core.deepfry({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -82,7 +82,7 @@ export default class Filters {
 		return this.core.distort({
 			image,
 			level,
-		})
+		});
 	}
 
 	/**
@@ -93,7 +93,7 @@ export default class Filters {
 	greyscale({ image }: { image: string }): ArrayBuffer {
 		return this.core.greyscale({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -104,7 +104,7 @@ export default class Filters {
 	invert({ image }: { image: string }): ArrayBuffer {
 		return this.core.invert({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -117,7 +117,7 @@ export default class Filters {
 		return this.core.pixelate({
 			image,
 			pixels,
-		})
+		});
 	}
 
 	/**
@@ -128,7 +128,7 @@ export default class Filters {
 	sepia({ image }: { image: string }): ArrayBuffer {
 		return this.core.sepia({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -141,7 +141,7 @@ export default class Filters {
 		return this.core.sharpen({
 			image,
 			level,
-		})
+		});
 	}
 
 	/**
@@ -154,6 +154,6 @@ export default class Filters {
 		return this.core.threshold({
 			image,
 			amount,
-		})
+		});
 	}
 }

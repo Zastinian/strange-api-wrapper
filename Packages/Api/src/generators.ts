@@ -1,12 +1,12 @@
-import type core from "@hedystia/strange.core"
+import type core from "@hedystia/strange.core";
 
 /**
  * @class
  */
 export default class Generators {
-	core: core
+	core: core;
 	constructor(core: core) {
-		this.core = core
+		this.core = core;
 	}
 
 	/**
@@ -17,7 +17,7 @@ export default class Generators {
 	pokemon3000Years({ image }: { image: string }): ArrayBuffer {
 		return this.core.pokemon3000Years({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -28,7 +28,7 @@ export default class Generators {
 	ad({ image }: { image: string }): ArrayBuffer {
 		return this.core.ad({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -39,7 +39,7 @@ export default class Generators {
 	affect({ image }: { image: string }): ArrayBuffer {
 		return this.core.affect({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -52,7 +52,7 @@ export default class Generators {
 		return this.core.batslap({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -63,7 +63,7 @@ export default class Generators {
 	beautiful({ image }: { image: string }): ArrayBuffer {
 		return this.core.beautiful({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -76,7 +76,7 @@ export default class Generators {
 		return this.core.bed({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -87,7 +87,7 @@ export default class Generators {
 	bobross({ image }: { image: string }): ArrayBuffer {
 		return this.core.bobross({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -100,7 +100,7 @@ export default class Generators {
 		return this.core.challenger({
 			image,
 			silhouetted,
-		})
+		});
 	}
 
 	/**
@@ -111,7 +111,7 @@ export default class Generators {
 	changemymind({ text }: { text: string }): ArrayBuffer {
 		return this.core.changemymind({
 			text,
-		})
+		});
 	}
 
 	/**
@@ -122,7 +122,7 @@ export default class Generators {
 	clown({ image }: { image: string }): ArrayBuffer {
 		return this.core.clown({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -133,7 +133,7 @@ export default class Generators {
 	clyde({ text }: { text: string }): ArrayBuffer {
 		return this.core.clyde({
 			text,
-		})
+		});
 	}
 
 	/**
@@ -144,7 +144,7 @@ export default class Generators {
 	confusedstonk({ image }: { image: string }): ArrayBuffer {
 		return this.core.confusedstonk({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -155,7 +155,7 @@ export default class Generators {
 	delete({ image }: { image: string }): ArrayBuffer {
 		return this.core.delete({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -170,15 +170,15 @@ export default class Generators {
 		text,
 		image,
 	}: {
-		title: string
-		text: string
-		image: string
+		title: string;
+		text: string;
+		image: string;
 	}): ArrayBuffer {
 		return this.core.demotivational({
 			title,
 			text,
 			image,
-		})
+		});
 	}
 
 	/**
@@ -189,7 +189,7 @@ export default class Generators {
 	dexter({ image }: { image: string }): ArrayBuffer {
 		return this.core.dexter({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -200,7 +200,7 @@ export default class Generators {
 	discordblack({ image }: { image: string }): ArrayBuffer {
 		return this.core.discordblack({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -211,7 +211,7 @@ export default class Generators {
 	discordblue({ image }: { image: string }): ArrayBuffer {
 		return this.core.discordblue({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -224,7 +224,7 @@ export default class Generators {
 		return this.core.doublestonk({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -235,7 +235,7 @@ export default class Generators {
 	facepalm({ image }: { image: string }): ArrayBuffer {
 		return this.core.facepalm({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -248,7 +248,7 @@ export default class Generators {
 		return this.core.fusion({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -265,17 +265,17 @@ export default class Generators {
 		third_step,
 		fourth_step,
 	}: {
-		first_step: string
-		second_step: string
-		third_step: string
-		fourth_step: string
+		first_step: string;
+		second_step: string;
+		third_step: string;
+		fourth_step: string;
 	}): ArrayBuffer {
 		return this.core.gruPlan({
 			first_step,
 			second_step,
 			third_step,
 			fourth_step,
-		})
+		});
 	}
 
 	/**
@@ -286,7 +286,7 @@ export default class Generators {
 	heartbreaking({ image }: { image: string }): ArrayBuffer {
 		return this.core.heartbreaking({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -297,7 +297,7 @@ export default class Generators {
 	hitler({ image }: { image: string }): ArrayBuffer {
 		return this.core.hitler({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -308,7 +308,7 @@ export default class Generators {
 	jail({ image }: { image: string }): ArrayBuffer {
 		return this.core.jail({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -319,7 +319,7 @@ export default class Generators {
 	jokeoverhead({ image }: { image: string }): ArrayBuffer {
 		return this.core.jokeoverhead({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -330,7 +330,7 @@ export default class Generators {
 	karaba({ image }: { image: string }): ArrayBuffer {
 		return this.core.karaba({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -343,7 +343,7 @@ export default class Generators {
 		return this.core.kiss({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -354,7 +354,7 @@ export default class Generators {
 	kyonGun({ image }: { image: string }): ArrayBuffer {
 		return this.core.kyonGun({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -365,7 +365,7 @@ export default class Generators {
 	lisaPresentation({ text }: { text: string }): ArrayBuffer {
 		return this.core.lisaPresentation({
 			text,
-		})
+		});
 	}
 
 	/**
@@ -376,7 +376,7 @@ export default class Generators {
 	mikkelsen({ image }: { image: string }): ArrayBuffer {
 		return this.core.mikkelsen({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -387,7 +387,7 @@ export default class Generators {
 	mirror({ image }: { image: string }): ArrayBuffer {
 		return this.core.mirror({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -398,7 +398,7 @@ export default class Generators {
 	mms({ image }: { image: string }): ArrayBuffer {
 		return this.core.mms({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -409,7 +409,7 @@ export default class Generators {
 	notstonk({ image }: { image: string }): ArrayBuffer {
 		return this.core.notstonk({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -420,7 +420,7 @@ export default class Generators {
 	ohno({ text }: { text: string }): ArrayBuffer {
 		return this.core.ohno({
 			text,
-		})
+		});
 	}
 
 	/**
@@ -437,17 +437,17 @@ export default class Generators {
 		third_step,
 		fourth_step,
 	}: {
-		first_step: string
-		second_step: string
-		third_step: string
-		fourth_step: string
+		first_step: string;
+		second_step: string;
+		third_step: string;
+		fourth_step: string;
 	}): ArrayBuffer {
 		return this.core.planktonPlan({
 			first_step,
 			second_step,
 			third_step,
 			fourth_step,
-		})
+		});
 	}
 
 	/**
@@ -458,7 +458,7 @@ export default class Generators {
 	poutine({ image }: { image: string }): ArrayBuffer {
 		return this.core.poutine({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -469,7 +469,7 @@ export default class Generators {
 	rip({ image }: { image: string }): ArrayBuffer {
 		return this.core.rip({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -480,7 +480,7 @@ export default class Generators {
 	shit({ image }: { image: string }): ArrayBuffer {
 		return this.core.shit({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -491,7 +491,7 @@ export default class Generators {
 	snyder({ image }: { image: string }): ArrayBuffer {
 		return this.core.snyder({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -504,7 +504,7 @@ export default class Generators {
 		return this.core.spank({
 			image1,
 			image2,
-		})
+		});
 	}
 
 	/**
@@ -515,7 +515,7 @@ export default class Generators {
 	stonk({ image }: { image: string }): ArrayBuffer {
 		return this.core.stonk({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -526,7 +526,7 @@ export default class Generators {
 	tattoo({ image }: { image: string }): ArrayBuffer {
 		return this.core.tattoo({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -537,7 +537,7 @@ export default class Generators {
 	thomas({ image }: { image: string }): ArrayBuffer {
 		return this.core.thomas({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -548,7 +548,7 @@ export default class Generators {
 	trash({ image }: { image: string }): ArrayBuffer {
 		return this.core.trash({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -559,7 +559,7 @@ export default class Generators {
 	wanted({ image }: { image: string }): ArrayBuffer {
 		return this.core.wanted({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -570,7 +570,7 @@ export default class Generators {
 	worthless({ image }: { image: string }): ArrayBuffer {
 		return this.core.worthless({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -585,14 +585,14 @@ export default class Generators {
 		username,
 		text,
 	}: {
-		image: string
-		username: string
-		text: string
+		image: string;
+		username: string;
+		text: string;
 	}): ArrayBuffer {
 		return this.core.youtube({
 			image,
 			username,
 			text,
-		})
+		});
 	}
 }

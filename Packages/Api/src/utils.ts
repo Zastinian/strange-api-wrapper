@@ -1,12 +1,12 @@
-import type core from "@hedystia/strange.core"
+import type core from "@hedystia/strange.core";
 
 /**
  * @class
  */
 export default class Utils {
-	core: core
+	core: core;
 	constructor(core: core) {
-		this.core = core
+		this.core = core;
 	}
 
 	/**
@@ -17,7 +17,7 @@ export default class Utils {
 	circle({ image }: { image: string }): ArrayBuffer {
 		return this.core.circle({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -28,7 +28,7 @@ export default class Utils {
 	color({ code }: { code: string }): ArrayBuffer {
 		return this.core.color({
 			code,
-		})
+		});
 	}
 
 	/**
@@ -39,7 +39,7 @@ export default class Utils {
 	denoise({ image }: { image: string }): ArrayBuffer {
 		return this.core.denoise({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -60,12 +60,12 @@ export default class Utils {
 		guild,
 		bkg,
 	}: {
-		avatar: string
-		name: string
-		discriminator: string
-		count: number
-		guild: string
-		bkg: string
+		avatar: string;
+		name: string;
+		discriminator: string;
+		count: number;
+		guild: string;
+		bkg: string;
 	}): ArrayBuffer {
 		return this.core.farewellCard({
 			avatar,
@@ -74,7 +74,7 @@ export default class Utils {
 			count,
 			guild,
 			bkg,
-		})
+		});
 	}
 
 	/**
@@ -105,17 +105,17 @@ export default class Utils {
 		bgimage,
 		bgcolor,
 	}: {
-		avatar: string
-		currentxp: number
-		reqxp: number
-		level: number
-		rank: number
-		status: string
-		name: string
-		discriminator: string
-		barcolor: string
-		bgimage: string
-		bgcolor: string
+		avatar: string;
+		currentxp: number;
+		reqxp: number;
+		level: number;
+		rank: number;
+		status: string;
+		name: string;
+		discriminator: string;
+		barcolor: string;
+		bgimage: string;
+		bgcolor: string;
 	}): ArrayBuffer {
 		return this.core.rankCard({
 			avatar,
@@ -129,7 +129,7 @@ export default class Utils {
 			barcolor,
 			bgimage,
 			bgcolor,
-		})
+		});
 	}
 
 	/**
@@ -150,12 +150,12 @@ export default class Utils {
 		end,
 		title,
 	}: {
-		image: string
-		author: string
-		album: string
-		start: number
-		end: number
-		title: string
+		image: string;
+		author: string;
+		album: string;
+		start: number;
+		end: number;
+		title: string;
 	}): ArrayBuffer {
 		return this.core.spotifyCard({
 			image,
@@ -164,7 +164,7 @@ export default class Utils {
 			start,
 			end,
 			title,
-		})
+		});
 	}
 
 	/**
@@ -185,12 +185,12 @@ export default class Utils {
 		guild,
 		bkg,
 	}: {
-		avatar: string
-		name: string
-		discriminator: string
-		count: number
-		guild: string
-		bkg: string
+		avatar: string;
+		name: string;
+		discriminator: string;
+		count: number;
+		guild: string;
+		bkg: string;
 	}): ArrayBuffer {
 		return this.core.welcomeCard({
 			avatar,
@@ -199,6 +199,6 @@ export default class Utils {
 			count,
 			guild,
 			bkg,
-		})
+		});
 	}
 }

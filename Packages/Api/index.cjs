@@ -1,3 +1,3 @@
-const { default: StrangeApi } = require("./dist/index.js")
+const { default: StrangeApi } = require("./dist/index.js");
 
-module.exports = StrangeApi
+module.exports = StrangeApi;

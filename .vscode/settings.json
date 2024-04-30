@@ -4,7 +4,7 @@
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-lock.yaml, package-lock.json, yarn.lock, bun.lockb",
     ".prettierrc.mjs": ".prettierignore",
-    ".eslintrc.cjs": ".lintstagedrc"
+    "eslint.config.js": ".lintstagedrc"
   },
   "editor.linkedEditing": true,
   "editor.codeActionsOnSave": {
