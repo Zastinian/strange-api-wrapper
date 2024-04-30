@@ -1,12 +1,12 @@
-import type core from "@hedystia/strange.core"
+import type core from "@hedystia/strange.core";
 
 /**
  * @class
  */
 export default class Overlays {
-	core: core
+	core: core;
 	constructor(core: core) {
-		this.core = core
+		this.core = core;
 	}
 
 	/**
@@ -17,7 +17,7 @@ export default class Overlays {
 	approved({ image }: { image: string }): ArrayBuffer {
 		return this.core.approved({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -28,7 +28,7 @@ export default class Overlays {
 	brazzers({ image }: { image: string }): ArrayBuffer {
 		return this.core.brazzers({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -39,7 +39,7 @@ export default class Overlays {
 	gay({ image }: { image: string }): ArrayBuffer {
 		return this.core.gay({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -50,7 +50,7 @@ export default class Overlays {
 	halloween({ image }: { image: string }): ArrayBuffer {
 		return this.core.halloween({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -61,7 +61,7 @@ export default class Overlays {
 	rejected({ image }: { image: string }): ArrayBuffer {
 		return this.core.rejected({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -72,7 +72,7 @@ export default class Overlays {
 	thuglife({ image }: { image: string }): ArrayBuffer {
 		return this.core.thuglife({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -83,7 +83,7 @@ export default class Overlays {
 	toBeContinued({ image }: { image: string }): ArrayBuffer {
 		return this.core.toBeContinued({
 			image,
-		})
+		});
 	}
 
 	/**
@@ -94,6 +94,6 @@ export default class Overlays {
 	wasted({ image }: { image: string }): ArrayBuffer {
 		return this.core.wasted({
 			image,
-		})
+		});
 	}
 }

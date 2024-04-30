@@ -1,3 +1,3 @@
-const node = require("./index.node")
+const node = require("./index.node");
 
-module.exports = node.init
+module.exports = node.init;
