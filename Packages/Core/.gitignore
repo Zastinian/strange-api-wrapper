@@ -6,3 +6,4 @@ npm-debug.log*
 Cargo.lock
 pnpm-lock.yaml
 url.mjs
+bun.lockb
