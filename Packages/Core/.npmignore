@@ -7,3 +7,5 @@ target/
 src/
 url.mjs
 jsdoc.js
+bun.lockb
+.npmignore
